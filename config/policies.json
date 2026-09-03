@@ -1,0 +1,24 @@
+{
+  "recovery": {
+    "max_retries": 3,
+    "escalate_on_failure": true,
+    "escalation_map": {
+      "model_1": "model_2",
+      "model_2": "model_3",
+      "model_3": "model_3"
+    },
+    "allow_replanning": true
+  },
+  "concurrency": {
+    "max_parallel_subtasks": 5,
+    "task_timeout_seconds": 30.0
+  },
+  "cost_optimization": {
+    "prefer_cheaper_when_equivalent": true,
+    "max_cost_per_request": 10.0
+  },
+  "verification": {
+    "strict_mode": true,
+    "require_deliverables_check": true
+  }
+}

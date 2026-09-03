@@ -1,0 +1,21 @@
+[
+  {"id": 151, "prompt": "What is an API?", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 152, "prompt": "Explain REST architecture.", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 153, "prompt": "Define JSON format.", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 154, "prompt": "Capital of Japan.", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 155, "prompt": "Translate 'Thank you' to German.", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 156, "prompt": "Write a Python script to check if a string is palindrome.", "expected_model": "model_1", "category": "eval_simple_coding"},
+  {"id": 157, "prompt": "What is 100 divided by 5?", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 158, "prompt": "What is the speed of light?", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 159, "prompt": "Format this list into CSV.", "expected_model": "model_1", "category": "eval_simple"},
+  {"id": 200, "prompt": "Build a REST API endpoint in Flask that saves user feedback to MySQL.", "expected_model": "model_2", "category": "eval_medium_coding"},
+  {"id": 201, "prompt": "Refactor Python script to use multithreading for HTTP requests.", "expected_model": "model_2", "category": "eval_medium_coding"},
+  {"id": 202, "prompt": "SQL query using joins and GROUP BY to calculate total revenue per product category.", "expected_model": "model_2", "category": "eval_medium_coding"},
+  {"id": 203, "prompt": "Debug MemoryError when loading 5GB CSV file into Pandas DataFrame.", "expected_model": "model_2", "category": "eval_medium_debugging"},
+  {"id": 204, "prompt": "Explain difference between processes and threads in operating systems.", "expected_model": "model_2", "category": "eval_medium_reasoning"},
+  {"id": 250, "prompt": "Design a production e-commerce platform with authentication, payments, inventory, recommendations, admin dashboard and monitoring.", "expected_model": "model_3", "category": "eval_complex_arch"},
+  {"id": 251, "prompt": "Audit smart contract for reentrancy vulnerabilities and gas optimization.", "expected_model": "model_3", "category": "eval_complex_security"},
+  {"id": 252, "prompt": "Formally derive Black-Scholes partial differential equation solution.", "expected_model": "model_3", "category": "eval_complex_math"},
+  {"id": 253, "prompt": "Architect multi-region Kubernetes cluster deployment with active-active database failover.", "expected_model": "model_3", "category": "eval_complex_arch"},
+  {"id": 300, "prompt": "Design a high-frequency algorithmic trading platform with zero GC latency in Java.", "expected_model": "model_3", "category": "eval_complex_arch"}
+]

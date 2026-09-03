@@ -1,0 +1,30 @@
+{
+  "thresholds": {
+    "model_1_max_score": 29.0,
+    "model_2_max_score": 68.0,
+    "critical_gap_threshold": 0.15,
+    "max_average_gap": 0.20,
+    "minimum_capability_score": 0.50,
+    "minimum_context_capacity": 16000
+  },
+  "confidence": {
+    "high_confidence_min": 0.82,
+    "boundary_margin": 5.0,
+    "escalate_on_uncertainty": true
+  },
+  "capability_weights": {
+    "reasoning": 0.15,
+    "planning": 0.12,
+    "architecture": 0.12,
+    "implementation": 0.10,
+    "coding": 0.10,
+    "security": 0.08,
+    "distributed_systems": 0.10,
+    "data_modeling": 0.05,
+    "integration": 0.05,
+    "testing": 0.04,
+    "documentation": 0.04,
+    "summarization": 0.03,
+    "context_handling": 0.02
+  }
+}

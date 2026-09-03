@@ -1,0 +1,103 @@
+{
+  "models": {
+    "model_1": {
+      "id": "model_1",
+      "name": "Model 1 (Simple)",
+      "provider": "mock",
+      "tier": "simple",
+      "max_complexity": 32.0,
+      "capabilities": {
+        "reasoning": 0.40,
+        "planning": 0.30,
+        "architecture": 0.25,
+        "implementation": 0.45,
+        "coding": 0.45,
+        "security": 0.30,
+        "distributed_systems": 0.20,
+        "data_modeling": 0.35,
+        "integration": 0.35,
+        "testing": 0.40,
+        "documentation": 0.80,
+        "summarization": 0.90,
+        "context_handling": 0.50,
+        "tool_use": 0.40,
+        "verification": 0.40,
+        "mathematics": 0.30,
+        "multimodal": false,
+        "reliability": 0.95,
+        "context_window": 16000
+      },
+      "cost": {
+        "input_per_1k": 0.0005,
+        "output_per_1k": 0.0015
+      },
+      "specializations": ["qna", "explanations", "simple_code_edits", "text_formatting", "documentation"]
+    },
+    "model_2": {
+      "id": "model_2",
+      "name": "Model 2 (Medium)",
+      "provider": "mock",
+      "tier": "medium",
+      "max_complexity": 68.0,
+      "capabilities": {
+        "reasoning": 0.70,
+        "planning": 0.65,
+        "architecture": 0.65,
+        "implementation": 0.80,
+        "coding": 0.85,
+        "security": 0.65,
+        "distributed_systems": 0.60,
+        "data_modeling": 0.75,
+        "integration": 0.75,
+        "testing": 0.75,
+        "documentation": 0.85,
+        "summarization": 0.90,
+        "context_handling": 0.75,
+        "tool_use": 0.80,
+        "verification": 0.75,
+        "mathematics": 0.70,
+        "multimodal": true,
+        "reliability": 0.96,
+        "context_window": 64000
+      },
+      "cost": {
+        "input_per_1k": 0.0030,
+        "output_per_1k": 0.0090
+      },
+      "specializations": ["feature_implementation", "refactoring", "debugging", "data_analysis", "scripting", "api_design"]
+    },
+    "model_3": {
+      "id": "model_3",
+      "name": "Model 3 (Complex)",
+      "provider": "mock",
+      "tier": "complex",
+      "max_complexity": 100.0,
+      "capabilities": {
+        "reasoning": 0.98,
+        "planning": 0.98,
+        "architecture": 0.98,
+        "implementation": 0.95,
+        "coding": 0.95,
+        "security": 0.95,
+        "distributed_systems": 0.98,
+        "data_modeling": 0.95,
+        "integration": 0.95,
+        "testing": 0.95,
+        "documentation": 0.95,
+        "summarization": 0.95,
+        "context_handling": 0.95,
+        "tool_use": 0.95,
+        "verification": 0.95,
+        "mathematics": 0.95,
+        "multimodal": true,
+        "reliability": 0.99,
+        "context_window": 128000
+      },
+      "cost": {
+        "input_per_1k": 0.0150,
+        "output_per_1k": 0.0450
+      },
+      "specializations": ["system_architecture", "distributed_systems", "formal_proofs", "security_audits", "multi_step_planning", "concurrency"]
+    }
+  }
+}
