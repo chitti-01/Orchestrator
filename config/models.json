@@ -3,7 +3,9 @@
     "model_1": {
       "id": "model_1",
       "name": "Model 1 (Simple)",
-      "provider": "mock",
+      "provider": "openai",
+      "model_name": "gpt-4o-mini",
+      "api_key_env": "MODEL_1_API_KEY",
       "tier": "simple",
       "max_complexity": 32.0,
       "capabilities": {
@@ -36,7 +38,9 @@
     "model_2": {
       "id": "model_2",
       "name": "Model 2 (Medium)",
-      "provider": "mock",
+      "provider": "openai",
+      "model_name": "gpt-4o",
+      "api_key_env": "MODEL_2_API_KEY",
       "tier": "medium",
       "max_complexity": 68.0,
       "capabilities": {
@@ -69,7 +73,9 @@
     "model_3": {
       "id": "model_3",
       "name": "Model 3 (Complex)",
-      "provider": "mock",
+      "provider": "openai",
+      "model_name": "gpt-4o",
+      "api_key_env": "MODEL_3_API_KEY",
       "tier": "complex",
       "max_complexity": 100.0,
       "capabilities": {
@@ -101,3 +107,4 @@
     }
   }
 }
+

@@ -40,12 +40,19 @@ class AsyncScheduler:
         exec_res = await self.executor.execute(node.selected_model, pkg)
         
         node.execution_time_ms = exec_res.latency_ms
+        node.provider = getattr(exec_res, "provider", None)
+        node.actual_model_name = getattr(exec_res, "actual_model_name", None)
+        node.tokens_used = getattr(exec_res, "tokens_used", 0)
+        
         if exec_res.success:
             node.status = "completed"
             node.result = exec_res.output
+            node.execution_error = None
             self.context_manager.record_node_result(node.task_id, exec_res.output)
         else:
             node.status = "failed"
             node.result = exec_res.error or "Execution failed"
+            node.execution_error = exec_res.error or "Execution failed"
 
         return node
+

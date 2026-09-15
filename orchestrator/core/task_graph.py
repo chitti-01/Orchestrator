@@ -29,6 +29,11 @@ class TaskNode(BaseModel):
     retry_count: int = 0
     verification_status: str = "unverified"  # unverified, passed, failed
     execution_time_ms: float = 0.0
+    provider: Optional[str] = None
+    actual_model_name: Optional[str] = None
+    tokens_used: int = 0
+    execution_error: Optional[str] = None
+
 
 class TaskGraph(BaseModel):
     graph_id: str = Field(default_factory=lambda: f"wf_{uuid.uuid4().hex[:8]}")

@@ -28,6 +28,11 @@ class ModelRegistry:
                 id=m_data["id"],
                 name=m_data["name"],
                 tier=m_data["tier"],
+                provider=m_data.get("provider", "openai"),
+                model_name=m_data.get("model_name", m_data["id"]),
+                api_key_env=m_data.get("api_key_env"),
+                api_base_env=m_data.get("api_base_env"),
+                api_base=m_data.get("api_base"),
                 description=m_data.get("description", ""),
                 capabilities=caps,
                 cost=cost,
@@ -52,6 +57,7 @@ class ModelRegistry:
         return {
             "model_1": ModelCapabilityProfile(
                 id="model_1", name="Model 1 (Simple)", tier="simple",
+                provider="openai", model_name="gpt-4o-mini", api_key_env="MODEL_1_API_KEY",
                 capabilities=ModelCapabilities(
                     reasoning=0.40, planning=0.30, architecture=0.25, implementation=0.45, coding=0.45,
                     security=0.30, distributed_systems=0.20, data_modeling=0.35, integration=0.35, testing=0.40,
@@ -62,6 +68,7 @@ class ModelRegistry:
             ),
             "model_2": ModelCapabilityProfile(
                 id="model_2", name="Model 2 (Medium)", tier="medium",
+                provider="openai", model_name="gpt-4o", api_key_env="MODEL_2_API_KEY",
                 capabilities=ModelCapabilities(
                     reasoning=0.70, planning=0.65, architecture=0.65, implementation=0.80, coding=0.85,
                     security=0.65, distributed_systems=0.60, data_modeling=0.75, integration=0.75, testing=0.75,
@@ -72,6 +79,7 @@ class ModelRegistry:
             ),
             "model_3": ModelCapabilityProfile(
                 id="model_3", name="Model 3 (Complex)", tier="complex",
+                provider="openai", model_name="gpt-4o", api_key_env="MODEL_3_API_KEY",
                 capabilities=ModelCapabilities(
                     reasoning=0.98, planning=0.98, architecture=0.98, implementation=0.95, coding=0.95,
                     security=0.95, distributed_systems=0.98, data_modeling=0.95, integration=0.95, testing=0.95,
@@ -81,3 +89,4 @@ class ModelRegistry:
                 cost=ModelCost(input_per_1k=0.015, output_per_1k=0.045), latency_class="high_capability"
             )
         }
+

@@ -116,7 +116,20 @@ class Orchestrator:
 
         # Format V5 Structured Audit & Metadata Results
         plan_nodes_output = [node.model_dump() for node in graph.nodes.values()]
-        results_output = [{"task_id": n.task_id, "name": n.name, "output": n.result, "status": n.status, "model": n.selected_model} for n in graph.nodes.values()]
+        results_output = [
+            {
+                "task_id": n.task_id,
+                "name": n.name,
+                "output": n.result,
+                "status": n.status,
+                "model": n.selected_model,
+                "provider": n.provider,
+                "actual_model_name": n.actual_model_name,
+                "tokens_used": n.tokens_used,
+                "error": n.execution_error
+            }
+            for n in graph.nodes.values()
+        ]
         event_logs = [e.model_dump() for e in events.get_events()]
         extracted_reqs_output = [item.model_dump() for item in reqs.extracted_requirements]
         coverage_output = [cov.model_dump() for cov in v_res.coverage]
@@ -138,6 +151,10 @@ class Orchestrator:
                 "task_complexity": n.task_complexity,
                 "criticality": n.criticality,
                 "required_capabilities": n.required_capabilities,
+                "provider": n.provider,
+                "actual_model_name": n.actual_model_name,
+                "tokens_used": n.tokens_used,
+                "error": n.execution_error,
                 "candidates": {
                     "MODEL_1": {
                         "eligible": "model_1" in n.eligible_models,
@@ -162,6 +179,7 @@ class Orchestrator:
                 "selected_model": n.selected_model,
                 "reason": n.selection_reason
             })
+
 
         # Primary model is the highest model tier used across tasks or primary decision
         task_models = [n.selected_model for n in graph.nodes.values()]
